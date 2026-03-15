@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header';
+import AnimatedRoutes from "./components/AnimatedRoutes";
+import { fairyDustCursor } from "cursor-effects";
+import { useEffect } from "react"
 
 function App() {
+  const personalDetails = {
+    name: "Raj Kukadia",
+    location: "Boston, MA, USA",
+    tagline: "I'm a Software Engineer",
+    email: "rajkukadia1@gmail.com",
+    availability: "",
+    brand: "" 
+  };
+
+  useEffect(() => {
+    new fairyDustCursor({
+      colors: ["#ff0000", "#00ff00", "#0000ff"],
+    })
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header/>
+    <AnimatedRoutes personalDetails={personalDetails} />
+    </>
   );
 }
 
