@@ -3,6 +3,7 @@ import AnimatedRoutes from "./components/AnimatedRoutes";
 import { fairyDustCursor } from "cursor-effects";
 import { useEffect } from "react"
 
+// App
 function App() {
   const personalDetails = {
     name: "Raj Kukadia",
