@@ -1,8 +1,13 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Landing from "../pages/landing/Landing";
+import { PersonalDetails } from "../types";
 
-const AnimatedRoutes = ({ personalDetails }) => {
+interface AnimatedRoutesProps {
+  personalDetails: PersonalDetails;
+}
+
+const AnimatedRoutes: React.FC<AnimatedRoutesProps> = ({ personalDetails }) => {
   const location = useLocation();
 
   return (

@@ -1,4 +1,6 @@
-const SocialIcons = () => {
+import React from "react";
+
+const SocialIcons: React.FC = () => {
     const styles = {
       icon: {
         textDecoration: "none",
@@ -9,7 +11,7 @@ const SocialIcons = () => {
     };
   
     return (
-      <div className="socialIcons" style={styles.socialIcons}>
+      <div className="socialIcons">
         {/* <a className="icon" style={styles.icon} href="">
           <i className="fa-brands fa-github" aria-hidden="true" title="Raj Kukadia's GitHub Profile"></i>
         </a> */}
@@ -27,4 +29,3 @@ const SocialIcons = () => {
   };
   
   export default SocialIcons;
-  

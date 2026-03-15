@@ -2,10 +2,10 @@ import Header from './components/Header';
 import AnimatedRoutes from "./components/AnimatedRoutes";
 import { fairyDustCursor } from "cursor-effects";
 import { useEffect } from "react"
+import { PersonalDetails } from './types';
 
-// App
 function App() {
-  const personalDetails = {
+  const personalDetails: PersonalDetails = {
     name: "Raj Kukadia",
     location: "Boston, MA, USA",
     tagline: "I'm a Software Engineer",

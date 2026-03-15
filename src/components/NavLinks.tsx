@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 import openMenu from "../images/open.svg";
 import closeMenu from "../images/close.svg";
 
-const NavLinks = () => {
-   const [isMenuOpen, setIsMenuOpen] = useState(false);
+const NavLinks: React.FC = () => {
+   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
   return (
     <>
         <button className="dropdown-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
