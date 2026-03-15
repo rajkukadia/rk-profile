@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Landing from "../pages/landing/Landing";
+import GameIntro from "../pages/intro/GameIntro";
 import { PersonalDetails } from "../types";
 
 interface AnimatedRoutesProps {
@@ -12,7 +13,8 @@ const AnimatedRoutes: React.FC<AnimatedRoutesProps> = ({ personalDetails }) => {
 
   return (
     <Routes location={location} key={location.pathname}>
-      <Route path="/" element={<Landing name={personalDetails.name} tagline={personalDetails.tagline} />} />
+      <Route path="/" element={<GameIntro />} />
+      <Route path="/home" element={<Landing name={personalDetails.name} tagline={personalDetails.tagline} />} />
       {/* <Route
         path="/about"
         element={
